@@ -1,0 +1,245 @@
+*{
+    font-family: "montserrat",sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .page{
+    background: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col{
+    flex: 1;
+    height: 100vh;
+    position: relative;
+  }
+  .imagem-col{
+    background: url(img/img1.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .imagem-coll{
+    background: url(img/img2.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .papelparede{
+    color: #fff;
+    text-transform: uppercase;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .papelparede span{
+    padding: 0 14px;
+    font-size: 10px;
+  }
+  .papelparede span div{
+    font-size: 40px;
+  }
+  
+  .newsletter{
+    width: 90%;
+  }
+  
+  .newsletter h4{
+  /*  font-style: italic;*/
+    font-size: 18px;
+  }
+  
+  .newsletter input{
+    display: block;
+    margin: 18px auto;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #350d0d;
+    outline: none;
+  }
+  
+  .newsletter-btn{
+    background: linear-gradient(125deg,#df2716, #8d1a00);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .newsletter-input:hover{
+    opacity: .7;
+  }
+  
+  /* Botão Login Cliente */
+  .btnn{
+    display: block;
+    margin: 18px auto;
+    padding: 14px 12px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;  
+    text-align: center;
+    font-family: "montserrat", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid #f1f1f1;
+    outline: none;
+    /*vertical-align: middle;*/
+    background: linear-gradient(125deg,#df2716, #8d1a00);    
+  }
+  .botao-info {
+    background-color: linear-gradient(125deg,#df2716, #8d1a00);
+    border-color: #585252;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .botao-info:hover, .btnn-info:focus, .btnn-info:acitive {
+    background-color: linear-gradient(125deg,#df2716, #8d1a00);  
+    border-color: #585252;
+    color: #fff;
+    opacity: .7;
+  }
+  /*.newsletter input{
+    display: block;
+    margin: 18px auto;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #f1f1f1;
+    outline: none;
+  }
+  .newsletter-btn{
+    background: linear-gradient(125deg,#df2716, #8d1a00);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .newsletter-input:hover{
+    opacity: .7;
+  }*/
+  
+  
+  .boton{
+    font-family: "montserrat", sans-serif;
+    width: 100%;
+    color: #b42100;
+    padding: 5px;
+    font-size: 55px;
+    text-shadow:2px 1px 0 rgb(15, 15, 15);
+    cursor: pointer;
+    margin: 12px auto;
+  }
+  
+  .boton input{
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #f1f1f1;
+    background: rgba(0, 0, 0, 0.4);
+    width: 900px;
+    height: 50px;
+    margin-top: -14%;
+    padding: 50px;
+    margin-top: -14%;
+  }
+  
+  .myfont {
+    color: #b42101;
+    font-size: 55px;
+    text-shadow:2px 1px 0 rgb(15, 15, 15);
+  }
+  
+  .botao11{
+    font-family: "montserrat", sans-serif;
+    width: 100%;
+    color: #b42100;
+    padding: 5px;
+    font-size: 55px;
+    text-shadow:2px 1px 0 rgb(15, 15, 15);
+    cursor: pointer;
+    margin: 12px auto;
+  }
+  
+  .botao input{
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #f1f1f1;
+    background: rgba(0, 0, 0, 0.4);
+    width: 900px;
+    height: 50px;
+    margin-top: -14%;
+    padding: 50px;
+    margin-top: -14%;
+  }
+  
+  .btn{
+    border: none;
+    margin: 20px;
+    padding: 24px;
+    width: 220px;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 200%;
+    transition: 0.6s;
+  }
+  
+  .botao{
+    width: 50%;
+    background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+  }
+  .botao h4{
+    font-style: italic;
+    font-size: 18px;
+  }
+  .botao input{
+    display: block;
+    margin: 18px auto;
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #f1f1f1;
+    outline: none;
+  }
+  
+  .botao-btn{
+    background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .botao-btn:hover{
+    opacity: .7;
+  }
+  
+  /*.first-slide, .second-slide, .third-slide{
+    height: 100px;
+    width: auto; 
+  }*/
+  
+  @media screen and (max-width :900px){
+    .col{
+      flex: 100%;
+    }
+  }
+  
+  

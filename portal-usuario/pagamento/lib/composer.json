@@ -1,0 +1,14 @@
+{
+    "name": "gabrinetor/gerar_qrcode",
+    "description": "QRCode",
+    "authors": [
+        {
+            "name": "gabrinetor",
+            "email": "gabriela.netor94@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "chillerlan/php-qrcode": "dev-master"
+    }
+}
