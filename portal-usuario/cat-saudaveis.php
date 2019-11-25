@@ -8,7 +8,7 @@ if(!isset($_SESSION['login_cli'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>FastFood</title>
+	<title>Saudáveis</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -153,73 +153,53 @@ if(!isset($_SESSION['login_cli'])){
 				</div>
 
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+										<!-- Listar pedidos foreach em php de cada pedido -->
+					
+										<?php
 
-				<div class="row">
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-							<!-- Block2 -->
-							<div class="block2">
+require_once('conexao.class.php');
+$pdo = new Conexao(); //instanciar conexão
+$pedidos = $pdo->select("SELECT * FROM pedidos WHERE id_cat='3'");
 
-								<!--1-->
-								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-label">
-									<img src="img/01/01.jpg" alt="IMG-PRODUCT">
+?>
 
-									<div class="block2-overlay trans-0-4">
-										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-											</a>
+<div class="row">
+<!-- TESTE-->
+<?php foreach($pedidos as $pedido) : ?>
 
-										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Pedir
-											</button>
-										</div>
-									</div>
-								</div>
+<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+	<div class="block2">
+		<!-- 1 -->
+		<div class="block2-img wrap-pic-w of-hidden pos-relative block2-label">
+			<img src="<?php echo $pedido['img_ped']?>" alt="IMG-PRODUCT" style="height: 12rem;">
 
-								<div class="block2-txt p-t-20">
-									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-										Hamburguer Sensação
-									</a>
+			<div class="block2-overlay trans-0-4">
 
-									<span class="block2-price m-text6 p-r-5">
-										R$21.00
-									</span>
-								</div>
-							</div>
-						</div>
+				<div class="block2-btn-addcart w-size1 trans-0-4">
+					<!--a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="carrinho.php?acao=add&id_ped=< ?php echo $pedido['id_ped']?>" class="card-link" -->
+					<a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="carrinho.php?acao=add&id_ped=<?php echo $pedido['id_ped']?>" class="card-link" >
+						Pedir
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="block2-txt p-t-20">
+			<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+				<?php echo $pedido['nome_ped']; ?>
+			</a>		
+			<span class="block2-price m-text6 p-r-5">
+				<?php echo $pedido['preco_ped']; ?>
+			</span>
+		</div>
+	</div>
+</div>
 
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-							<!-- Block2 -->
-							<div class="block2">
-								<div class="block2-img wrap-pic-w of-hidden pos-relative">
-									<img src="img/01/pastel-de-carne.jpg" alt="IMG-PRODUCT">
+<?php endforeach;?>
 
-									<div class="block2-overlay trans-0-4">
-										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-											</a>
-
-										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Pedir
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="block2-txt p-t-20">
-									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-										Pastel de Carne
-									</a>
-
-									<span class="block2-price m-text6 p-r-5">
-										R$10.00
-									</span>
-								</div>
-							</div>
-						</div>
+</div>
 
 				</div>
+		
 			</div>
 		</div>
 	</section>
