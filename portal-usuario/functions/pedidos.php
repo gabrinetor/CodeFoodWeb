@@ -1,5 +1,5 @@
 <?php 
-function getPedidos($pdo){
+function getPedidos(PDO $pdo){
 	$sql = "SELECT *  FROM pedidos ";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute();
@@ -7,7 +7,7 @@ function getPedidos($pdo){
 }
 
 function getPedidosByIds($pdo, $ids) {
-	$sql = "SELECT * FROM pedidos WHERE id_ped IN (".$ids.")";
+	$sql = "SELECT * FROM pedidos WHERE id_ped in ($ids)";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute();
 	return $stmt->fetchAll(PDO::FETCH_ASSOC);

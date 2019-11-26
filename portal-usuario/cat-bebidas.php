@@ -172,7 +172,7 @@ if(!isset($_SESSION['login_cli'])){
 							<div class="block2">
 								<!-- 1 -->
 								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-label">
-									<img src="<?php echo $pedido['img_ped']?>" alt="IMG-PRODUCT" style="height: 12rem;">
+									<img src="<?php echo $pedido['img_ped']?>" alt="IMG-PRODUCT" style="height: 21rem;">
 
 									<div class="block2-overlay trans-0-4">
 

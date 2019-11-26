@@ -2,10 +2,9 @@
 
 session_start();
 
-unset($_SESSION['nome']);
-unset($_SESSION['login']);
-unset($_SESSION['email']);
-unset($_SESSION['tipo_acesso']);
+unset($_SESSION['nome_cli']);
+unset($_SESSION['login_cli']);
+unset($_SESSION['email_cli']);
 
 echo 'Esperamos você de volta em breve!!!'
 

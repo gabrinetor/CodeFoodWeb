@@ -85,14 +85,18 @@ if(!isset($_SESSION['login_cli'])){
 					</nav>
 
 				</div>
+			
+			<div class="header-icons">
+				<a href="sair.php">Sair</a>
+			</div>
 
-					</div>
-				</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	</header>
 	<!--HEADER-->
-
+	
 	<!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(img/heading/saudaveis.jpg);">
 		<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp" style="text-shadow: 0.1em 0.1em #000; animation: glitch-effect 3s infinite;">

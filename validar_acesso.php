@@ -4,11 +4,10 @@
 
 	require_once('db.class.php');
 
-	$nome_cli = $_POST['nome_cli'];
 	$login_cli = $_POST['login_cli'];
 	$senha_cli = md5($_POST['senha_cli']);
 
-	$sql = " SELECT nome_cli, login_cli, email_cli FROM clientes WHERE login_cli = '$login_cli' AND senha_cli = '$senha_cli' ";
+	$sql = " SELECT login_cli, email_cli FROM clientes WHERE login_cli = '$login_cli' AND senha_cli = '$senha_cli' ";
 
 	$objDb = new db();
 	$link = $objDb->conecta_mysql();
@@ -21,7 +20,6 @@
 
 		if(isset($dados_usuario['login_cli'])){
 
-			$_SESSION['nome_cli'] = $dados_usuario['nome_cli'];
 			$_SESSION['login_cli'] = $dados_usuario['login_cli'];
 			$_SESSION['email_cli'] = $dados_usuario['email_cli'];
 			

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if(!isset($_SESSION['login'])){
+	if(!isset($_SESSION['login_cli'])){
 		header('Location: index.php?erro=1');
 	}
 
@@ -398,29 +398,17 @@
 							Envie sua mensagem para nós.
 						</h4>
 
-						<!--<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Full Name">
-						</div>
-
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Phone Number">
-						</div>
-
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email" placeholder="Email Address">
-						</div>-->
-
 						<div align="left">
 						<br />
-						<label>Usuário: </label>
-						<?= $_SESSION['nome'] ?>
-						<br />
+						<!--<label>Usuário: </label>
+						< ?= $_SESSION['nome_cli'] ?>
+						<br />-->
 						<label>Login: </label>
-						<?= $_SESSION['login'] ?>
+						<?= $_SESSION['login_cli'] ?>
 						<br />
 						<label>E-mail: </label>
-						<?= $_SESSION['email'] ?>
-						<br />
+						<?= $_SESSION['email_cli'] ?>
+						<br /><br />
 						</div>
 
 						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="sugestoes" id="sugestoes" placeholder="Message"></textarea>
@@ -428,7 +416,7 @@
 						<div class="w-size25">
 							<!-- Button -->
 							<button type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
-								Send
+								Enviar
 							</button>
 						</div>
 					</form>

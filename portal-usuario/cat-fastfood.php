@@ -112,6 +112,11 @@ function getPedidosByIds($pdo, $ids) {
 					</nav>
 
 				</div>
+			
+			<div class="header-icons">
+				<a href="sair.php">Sair</a>
+			</div>
+
 			</div>
 			</div>
 			</div>
@@ -206,9 +211,14 @@ function getPedidosByIds($pdo, $ids) {
 
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!--a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="carrinho.php?acao=add&id_ped=< ?php echo $pedido['id_ped']?>" class="card-link" -->
-											<a class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" href="carrinho.php?acao=add&id_ped=<?php echo $pedido['id_ped']?>" class="card-link" >
-												Pedir
-											</a>
+											<form action="carrinho.php" method="post">
+												<input type="hidden" name="id_ped" value='<?php echo $pedido['id_ped']?>'>
+												<input type="hidden" name="acao" value="add">
+												<input type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" class="card-link" >
+													Pedir
+												</a>	
+											</form>
+											
 										</div>
 									</div>
 								</div>
